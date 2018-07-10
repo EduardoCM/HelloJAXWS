@@ -1,0 +1,13 @@
+Gernerar cliente.
+
+wsimport -keep -verbose ?wsdl
+
+public static void main(String[] args){
+		
+		HelloWorld helloService = new HelloWorldImplService().getHelloWorldImplPort();
+		String saludar = helloService.sayHi(args[0]);
+		System.out.println(":::: Inicio de ejecucion de WS");
+		System.out.println(saludar);
+		System.out.println("::::: Fin de ejecucion de WS ");
+		
+	}
